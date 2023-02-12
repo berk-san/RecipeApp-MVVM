@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MealsViewController" customModule="RecipeApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="TMJ-US-eGv" id="lbw-D2-WU9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,19 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v0-k6-e2e">
-                    <rect key="frame" x="106" y="250" width="181" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-US-eGv">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4v0-k6-e2e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FgC-AO-zh8"/>
-                <constraint firstItem="4v0-k6-e2e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="106" id="IM3-9v-ct0"/>
-                <constraint firstItem="4v0-k6-e2e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="191" id="sqB-kS-7sg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TMJ-US-eGv" secondAttribute="bottom" id="KdJ-Qn-zud"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TMJ-US-eGv" secondAttribute="trailing" id="Pt9-q9-gEd"/>
+                <constraint firstItem="TMJ-US-eGv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TUN-rg-rKy"/>
+                <constraint firstItem="TMJ-US-eGv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zjQ-Nz-xPZ"/>
             </constraints>
             <point key="canvasLocation" x="87.786259541984734" y="19.718309859154932"/>
         </view>

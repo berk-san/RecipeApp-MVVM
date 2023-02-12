@@ -1,6 +1,10 @@
 ## RecipeApp-MVVM
 
-#First Commit
+# First Commit
 1. Delete SceneDelegate
 2. Remove main.storyboard file
 3. Group project files and folders based on MVVM
+
+# Second Commit
+4. Setup tableView
+5. Create MealsViewModel
