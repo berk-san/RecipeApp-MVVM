@@ -16,4 +16,15 @@ class MealsViewModel {
     func numberOfRows(in section: Int) -> Int {
         return 10
     }
+    
+    func getData() {
+        APICaller.getMeals { result in
+            switch result {
+            case .success(let data):
+                print("Meals count: \(data.meals.count)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

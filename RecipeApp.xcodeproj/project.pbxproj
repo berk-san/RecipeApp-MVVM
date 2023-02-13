@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C041F1512999E12500E45974 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041F1502999E12500E45974 /* NetworkConstant.swift */; };
+		C041F1532999E85700E45974 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041F1522999E85700E45974 /* APICaller.swift */; };
+		C041F1552999E8C500E45974 /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041F1542999E8C500E45974 /* MealsModel.swift */; };
 		C0520D6A2998DC0800E543D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0520D692998DC0800E543D7 /* AppDelegate.swift */; };
 		C0520D732998DC0A00E543D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0520D722998DC0A00E543D7 /* Assets.xcassets */; };
 		C0520D762998DC0A00E543D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0520D742998DC0A00E543D7 /* LaunchScreen.storyboard */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C041F1502999E12500E45974 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		C041F1522999E85700E45974 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		C041F1542999E8C500E45974 /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
 		C0520D662998DC0800E543D7 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0520D692998DC0800E543D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0520D722998DC0A00E543D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 		C0520DA12998E30E00E543D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C041F1542999E8C500E45974 /* MealsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +202,8 @@
 		C0520DA52998E34200E543D7 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				C041F1502999E12500E45974 /* NetworkConstant.swift */,
+				C041F1522999E85700E45974 /* APICaller.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -330,8 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C041F1552999E8C500E45974 /* MealsModel.swift in Sources */,
+				C041F1512999E12500E45974 /* NetworkConstant.swift in Sources */,
 				C0520D6A2998DC0800E543D7 /* AppDelegate.swift in Sources */,
 				C0520D9C2998DF6800E543D7 /* MealsViewController.swift in Sources */,
+				C041F1532999E85700E45974 /* APICaller.swift in Sources */,
 				C0CFE8A42999673D003373FD /* MealsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

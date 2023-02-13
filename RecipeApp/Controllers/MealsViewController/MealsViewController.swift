@@ -20,6 +20,10 @@ class MealsViewController: UIViewController {
         configureUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.getData()
+    }
+    
     func configureUI() {
         self.title = "Meals"
         self.view.backgroundColor = .systemIndigo
