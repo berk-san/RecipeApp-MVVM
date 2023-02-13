@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02C7AD6299A96A8006A6778 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02C7AD5299A96A8006A6778 /* ObservableObject.swift */; };
 		C041F1512999E12500E45974 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041F1502999E12500E45974 /* NetworkConstant.swift */; };
 		C041F1532999E85700E45974 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041F1522999E85700E45974 /* APICaller.swift */; };
 		C041F1552999E8C500E45974 /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041F1542999E8C500E45974 /* MealsModel.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C02C7AD5299A96A8006A6778 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		C041F1502999E12500E45974 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		C041F1522999E85700E45974 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		C041F1542999E8C500E45974 /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		C0520DA22998E31F00E543D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C02C7AD5299A96A8006A6778 /* ObservableObject.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				C041F1512999E12500E45974 /* NetworkConstant.swift in Sources */,
 				C0520D6A2998DC0800E543D7 /* AppDelegate.swift in Sources */,
 				C0520D9C2998DF6800E543D7 /* MealsViewController.swift in Sources */,
+				C02C7AD6299A96A8006A6778 /* ObservableObject.swift in Sources */,
 				C041F1532999E85700E45974 /* APICaller.swift in Sources */,
 				C0CFE8A42999673D003373FD /* MealsViewModel.swift in Sources */,
 			);

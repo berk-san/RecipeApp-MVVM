@@ -9,22 +9,37 @@ import Foundation
 
 class MealsViewModel {
     
+    var isLoading: ObservableObject<Bool> = ObservableObject(false)
+    var cellDataSource: ObservableObject<[MealDetails]> = ObservableObject(nil)
+    var dataSource: MealsModel?
+    
     func numberOfSection() -> Int {
         return 1
     }
     
     func numberOfRows(in section: Int) -> Int {
-        return 10
+        return self.dataSource?.meals.count ?? 0
     }
     
     func getData() {
-        APICaller.getMeals { result in
+        if isLoading.value ?? true {
+            return
+        }
+        self.isLoading.value = true
+        APICaller.getMeals { [weak self] result in
+            self?.isLoading.value = false
             switch result {
             case .success(let data):
                 print("Meals count: \(data.meals.count)")
+                self?.dataSource = data
+                self?.mapCellData()
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func mapCellData() {
+        self.cellDataSource.value = self.dataSource?.meals ?? []
     }
 }

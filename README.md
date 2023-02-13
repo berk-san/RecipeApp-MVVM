@@ -14,3 +14,7 @@
 7. Convert JSON file to Model
 8. Use Result type
 9. Call network request in ViewModel
+
+## Fourth Commit
+10. Create ObservableObject Class for binding
+11. Pass data from MealsViewModel to MealsViewController
