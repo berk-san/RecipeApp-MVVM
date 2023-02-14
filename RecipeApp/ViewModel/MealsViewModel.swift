@@ -10,7 +10,7 @@ import Foundation
 class MealsViewModel {
     
     var isLoading: ObservableObject<Bool> = ObservableObject(false)
-    var cellDataSource: ObservableObject<[MealDetails]> = ObservableObject(nil)
+    var cellDataSource: ObservableObject<[MealCellViewModel]> = ObservableObject(nil)
     var dataSource: MealsModel?
     
     func numberOfSection() -> Int {
@@ -40,6 +40,6 @@ class MealsViewModel {
     }
     
     func mapCellData() {
-        self.cellDataSource.value = self.dataSource?.meals ?? []
-    }
+        self.cellDataSource.value = self.dataSource?.meals.compactMap({MealCellViewModel(meal: $0)})
+            }
 }

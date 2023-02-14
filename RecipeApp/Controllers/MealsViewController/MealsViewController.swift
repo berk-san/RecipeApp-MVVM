@@ -17,7 +17,7 @@ class MealsViewController: UIViewController {
     var viewModel: MealsViewModel = MealsViewModel()
     
     // Variables
-    var cellDataSource: [MealDetails] = []
+    var cellDataSource: [MealCellViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class MealsViewController: UIViewController {
     
     func configureUI() {
         self.title = "Meals"
-        self.view.backgroundColor = .systemIndigo
+        self.view.backgroundColor = .systemBackground
         setupTableView()
     }
     
@@ -67,7 +67,7 @@ extension MealsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func registerCell() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MealCell.register(), forCellReuseIdentifier: MealCell.identifier)
     }
     
     func reloadTableView() {
@@ -85,8 +85,20 @@ extension MealsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.cellDataSource[indexPath.row].strMeal
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MealCell.identifier, for: indexPath) as? MealCell else {
+            return UITableViewCell()
+        }
+        let cellViewModel = cellDataSource[indexPath.row]
+        cell.setupCell(viewModel: cellViewModel)
+//        cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 }

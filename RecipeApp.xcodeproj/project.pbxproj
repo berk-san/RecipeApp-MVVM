@@ -19,6 +19,11 @@
 		C0520D8D2998DC0A00E543D7 /* RecipeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0520D8C2998DC0A00E543D7 /* RecipeAppUITestsLaunchTests.swift */; };
 		C0520D9C2998DF6800E543D7 /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0520D9A2998DF6800E543D7 /* MealsViewController.swift */; };
 		C0520D9D2998DF6800E543D7 /* MealsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0520D9B2998DF6800E543D7 /* MealsViewController.xib */; };
+		C0CC97A6299AB83D00A66F52 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC97A4299AB83D00A66F52 /* MealCell.swift */; };
+		C0CC97A7299AB83D00A66F52 /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0CC97A5299AB83D00A66F52 /* MealCell.xib */; };
+		C0CC97A9299ABCF500A66F52 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC97A8299ABCF500A66F52 /* UIViewExtension.swift */; };
+		C0CC97AB299B2D7000A66F52 /* MealCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC97AA299B2D7000A66F52 /* MealCellViewModel.swift */; };
+		C0CC97AE299B382E00A66F52 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C0CC97AD299B382E00A66F52 /* SDWebImage */; };
 		C0CFE8A42999673D003373FD /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFE8A32999673D003373FD /* MealsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +61,10 @@
 		C0520D8C2998DC0A00E543D7 /* RecipeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C0520D9A2998DF6800E543D7 /* MealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
 		C0520D9B2998DF6800E543D7 /* MealsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealsViewController.xib; sourceTree = "<group>"; };
+		C0CC97A4299AB83D00A66F52 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
+		C0CC97A5299AB83D00A66F52 /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
+		C0CC97A8299ABCF500A66F52 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		C0CC97AA299B2D7000A66F52 /* MealCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCellViewModel.swift; sourceTree = "<group>"; };
 		C0CFE8A32999673D003373FD /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CC97AE299B382E00A66F52 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +160,7 @@
 		C0520D9E2998E2E300E543D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C0CC97A3299AB7F500A66F52 /* MealCell */,
 				C0520D742998DC0A00E543D7 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -159,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C0CFE8A32999673D003373FD /* MealsViewModel.swift */,
+				C0CC97AA299B2D7000A66F52 /* MealCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +210,7 @@
 		C0520DA42998E33A00E543D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C0CC97A8299ABCF500A66F52 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +222,15 @@
 				C041F1522999E85700E45974 /* APICaller.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		C0CC97A3299AB7F500A66F52 /* MealCell */ = {
+			isa = PBXGroup;
+			children = (
+				C0CC97A4299AB83D00A66F52 /* MealCell.swift */,
+				C0CC97A5299AB83D00A66F52 /* MealCell.xib */,
+			);
+			path = MealCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +249,9 @@
 			dependencies = (
 			);
 			name = RecipeApp;
+			packageProductDependencies = (
+				C0CC97AD299B382E00A66F52 /* SDWebImage */,
+			);
 			productName = RecipeApp;
 			productReference = C0520D662998DC0800E543D7 /* RecipeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +324,9 @@
 				Base,
 			);
 			mainGroup = C0520D5D2998DC0800E543D7;
+			packageReferences = (
+				C0CC97AC299B382E00A66F52 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = C0520D672998DC0800E543D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CC97A7299AB83D00A66F52 /* MealCell.xib in Resources */,
 				C0520D762998DC0A00E543D7 /* LaunchScreen.storyboard in Resources */,
 				C0520D732998DC0A00E543D7 /* Assets.xcassets in Resources */,
 				C0520D9D2998DF6800E543D7 /* MealsViewController.xib in Resources */,
@@ -342,11 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CC97A6299AB83D00A66F52 /* MealCell.swift in Sources */,
+				C0CC97AB299B2D7000A66F52 /* MealCellViewModel.swift in Sources */,
 				C041F1552999E8C500E45974 /* MealsModel.swift in Sources */,
 				C041F1512999E12500E45974 /* NetworkConstant.swift in Sources */,
 				C0520D6A2998DC0800E543D7 /* AppDelegate.swift in Sources */,
 				C0520D9C2998DF6800E543D7 /* MealsViewController.swift in Sources */,
 				C02C7AD6299A96A8006A6778 /* ObservableObject.swift in Sources */,
+				C0CC97A9299ABCF500A66F52 /* UIViewExtension.swift in Sources */,
 				C041F1532999E85700E45974 /* APICaller.swift in Sources */,
 				C0CFE8A42999673D003373FD /* MealsViewModel.swift in Sources */,
 			);
@@ -686,6 +718,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0CC97AC299B382E00A66F52 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0CC97AD299B382E00A66F52 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0CC97AC299B382E00A66F52 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0520D5E2998DC0800E543D7 /* Project object */;
 }

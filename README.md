@@ -18,3 +18,9 @@
 ## Fourth Commit
 10. Create ObservableObject Class for binding
 11. Pass data from MealsViewModel to MealsViewController
+
+## Fifth Commit
+12. Create MealCellViewModel
+13. Map Data to MealCellViewModel
+14. Put logic inside MealCellViewModel
+15. Present Cells inside MVVM pattern
